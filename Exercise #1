@@ -1,0 +1,28 @@
+# Set initial ticket and buyer counts
+tickets_remaining = 20
+total_buyers = 0
+
+# Loop until all tickets are sold
+while tickets_remaining > 0:
+    print(f"\nThere are {tickets_remaining} tickets in stock, the maximum ammount of tickets one person can buy is 4. Thank you!")
+
+    try:
+        #Ask user for how many tickets they want
+        ticket_buy = int(input("How any tickets would you like to purchase?"))
+    except ValueError:
+        print("Please input the ammount of tickets you would like to purchase in numerical form.")
+        continue
+
+    #Check to see if ticket number is valid
+    if ticket_buy <= 0 or ticket_buy > 4:
+        print("You can only purchase 1 to 4 tickets")
+    elif ticket_buy > tickets_remaining:
+        print(f"We currently only have {tickets_remaining} in stock.")
+    else:
+        # Ticket numbers were valid
+        tickets_remaining -= ticket_buy
+        total_buyers +=1
+        print(f"Thank you for your purchase, there are still {tickets_remaining} in stock.")
+
+# Display sales data after all tickets are sold
+print(f"\nWe are currently out of stock. We sold tickets to {total_buyers} people.")
