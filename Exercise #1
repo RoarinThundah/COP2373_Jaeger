@@ -8,7 +8,7 @@ while tickets_remaining > 0:
 
     try:
         #Ask user for how many tickets they want
-        ticket_buy = int(input("How any tickets would you like to purchase?"))
+        ticket_buy = int(input("How many tickets do you want?"))
     except ValueError:
         print("Please input the ammount of tickets you would like to purchase in numerical form.")
         continue
