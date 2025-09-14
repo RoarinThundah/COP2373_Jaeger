@@ -1,6 +1,6 @@
 # Set initial ticket and buyer counts
 tickets_remaining = 10
-total_buyers = 0
+suckers = 0
 
 # Loop until all tickets are sold
 while tickets_remaining > 0:
@@ -21,8 +21,8 @@ while tickets_remaining > 0:
     else:
         # Ticket numbers were valid
         tickets_remaining -= ticket_buy
-        total_buyers +=1
+        suckers +=1
         print(f"Thank you for your purchase, there are still {tickets_remaining} in stock.")
 
 # Display sales data after all tickets are sold
-print(f"\nWe are currently out of stock. We sold tickets to {total_buyers} people.")
+print(f"\nWe are currently out of stock. We sold tickets to {suckers} people.")
